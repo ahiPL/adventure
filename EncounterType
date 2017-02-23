@@ -1,0 +1,18 @@
+import java.util.Random;
+public class EncounterType {
+	int encTypChar;
+	int id;
+	int encTypRase;
+	static int count;
+	
+	Random rand1 = new Random();
+	
+	public EncounterType(){
+		encTypChar = rand1.nextInt(3);
+		encTypRase = rand1.nextInt(3);
+		id = count;
+		count++;
+		
+		}
+	
+	}

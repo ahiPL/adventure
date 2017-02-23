@@ -1,0 +1,24 @@
+import java.util.Random;
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		EncounterType npc0 = new EncounterType();
+		System.out.println(npc0.encTypRase);
+		System.out.println(npc0.encTypChar);
+		EncounterTypeText npcText0 = new EncounterTypeText(npc0.encTypRase, npc0.encTypChar);
+		System.out.println(npcText0.encTypRase);
+		System.out.println(npcText0.encTypChar);
+		npcText0.introduction();
+		npcText0.greeting();
+	
+		
+		
+		
+	
+	
+	
+	}
+
+}

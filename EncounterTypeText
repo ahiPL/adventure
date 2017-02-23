@@ -1,0 +1,208 @@
+import java.util.Random;
+
+public class EncounterTypeText extends EncounterType {
+	int encTypRase;
+	int encTypChar;
+	Random random1 = new Random();
+
+	public EncounterTypeText(int a, int b) {
+		this.encTypRase = a;
+		this.encTypChar = b;
+
+	}
+
+	public void introduction() {
+		String rase = null;
+		switch (encTypRase) {
+		case 0:
+			rase = "ogr";
+			break;
+		case 1:
+			rase = "czlowiek";
+			break;
+		case 2:
+			rase = "elf";
+			break;
+
+		}
+		System.out.print("Na swojej drodze spotykasz " + rase + "a. ");
+	}
+
+	public void greeting() {
+		String character = "";
+		String greetText = ""; // text powitania
+		int variant = random1.nextInt(3);
+		if (encTypRase == 0) { // test rasy: ogr
+
+			if (encTypChar == 0) { // test charakteru zly
+				character = "zly";
+
+				switch (variant) {
+				case 0:
+					greetText = "Ja ogr! Jebac Widzew! Wpierdol chcesz?";
+					break;
+				case 1:
+					greetText = "AAAARGH! W moje serce kamienne ŁKS! Ty widzew? Ja bić!";
+					break;
+				case 2:
+					greetText = "Jestem wege ogrem. Żre tylko ił i mech.";
+					break;
+
+				}
+			}
+
+			if (encTypChar == 1) { // test charakteru neutral
+
+				character = "neutralny";
+				switch (variant) {
+				case 0:
+					greetText = "ogr neutral1";
+					break;
+				case 1:
+					greetText = "ogr neutral2";
+					break;
+				case 2:
+					greetText = "ogr neutral3";
+					break;
+
+				}
+
+			}
+
+			if (encTypChar == 2) { // test charakteru dobry
+
+				character = "dobry";
+				switch (variant) {
+				case 0:
+					greetText = "ogr dobry1";
+					break;
+				case 1:
+					greetText = "ogr dobry2";
+					break;
+				case 2:
+					greetText = "ogr dobry3";
+					break;
+
+				}
+
+			}
+
+		}
+		if (encTypRase == 1) { // test rasy: czlowiek
+
+			if (encTypChar == 0) { // test charakteru zly
+				character = "zly";
+
+				switch (variant) {
+				case 0:
+					greetText = "czlowiek zly1";
+					break;
+				case 1:
+					greetText = "czlowiek zly2";
+					break;
+				case 2:
+					greetText = "czlowiek zly3";
+					break;
+
+				}
+			}
+
+			if (encTypChar == 1) { // test charakteru neutral
+
+				character = "neutralny";
+				switch (variant) {
+				case 0:
+					greetText = "czlowiek neutral1";
+					break;
+				case 1:
+					greetText = "czlowiek neutral2";
+					break;
+				case 2:
+					greetText = "czlowiek neutral3";
+					break;
+
+				}
+
+			}
+
+			if (encTypChar == 2) { // test charakteru dobry
+
+				character = "dobry";
+				switch (variant) {
+				case 0:
+					greetText = "czlowiek dobry1";
+					break;
+				case 1:
+					greetText = "czlowiek dobry2";
+					break;
+				case 2:
+					greetText = "czlowiek dobry3";
+					break;
+
+				}
+
+			}
+
+		}
+		if (encTypRase == 2) { // test rasy: elf
+
+			if (encTypChar == 0) { // test charakteru zly
+				character = "zly";
+
+				switch (variant) {
+				case 0:
+					greetText = "elf zly1";
+					break;
+				case 1:
+					greetText = "elf zly2";
+					break;
+				case 2:
+					greetText = "elf zly3";
+					break;
+
+				}
+			}
+
+			if (encTypChar == 1) { // test charakteru neutral
+
+				character = "neutralny";
+				switch (variant) {
+				case 0:
+					greetText = "elf neutral1";
+					break;
+				case 1:
+					greetText = "elf neutral2";
+					break;
+				case 2:
+					greetText = "elf neutral3";
+					break;
+
+				}
+
+			}
+
+			if (encTypChar == 2) { // test charakteru dobry
+
+				character = "dobry";
+				switch (variant) {
+				case 0:
+					greetText = "elf dobry1";
+					break;
+				case 1:
+					greetText = "elf dobry2";
+					break;
+				case 2:
+					greetText = "elf dobry3";
+					break;
+
+				}
+
+			}
+
+		}
+
+		System.out.println(
+				"Wita cie slowami ''" + greetText + "'' wiec podejrzewasz ze jego charakter jest " + character + ".");
+	}
+
+}
